@@ -8,7 +8,7 @@ image:
   repository: knt97/my-test-react-app
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "new-relic"
 
 imagePullSecrets:
   - name: knt-reg-secrect
@@ -45,7 +45,7 @@ ingress:
   enabled: true
   className: ""
   annotations: 
-    kubernetes.io/ingress.class: public
+    kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
     kubernetes.io/tls-acme: "true"
 
